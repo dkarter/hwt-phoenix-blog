@@ -37,3 +37,6 @@ npm-debug.log
 
 # HWT generates this file per linked worktree.
 /.env.worktree
+
+# This repository intentionally shares its HWT lifecycle configuration.
+!/.herdr-worktree.yaml
