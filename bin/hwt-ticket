@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -eu
+
+if [ "$#" -ne 1 ]; then
+  echo 'usage: bin/hwt-ticket DESCRIPTION' >&2
+  exit 2
+fi
+
+root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+ticket=$(XDG_CONFIG_HOME="$root/.hwt-config" lnr quick --json "$1")
+
+printf '%s\n' "$ticket" | jq -c '{
+  branchName,
+  metadata: {
+    identifier: .issueId,
+    title,
+    url
+  }
+}'

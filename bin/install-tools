@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -eu
+
+mise install \
+  github:crate-ci/committed \
+  github:dkarter/hwt \
+  github:dkarter/lnr \
+  dprint \
+  elixir \
+  erlang \
+  fnox \
+  gitleaks \
+  jq \
+  lefthook \
+  pitchfork

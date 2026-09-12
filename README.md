@@ -27,7 +27,7 @@ Create a worktree directly:
 hwt create --branch feature/change-title --base main --json
 ```
 
-Or create a Linear ticket and its worktree together:
+Or create an RMS Linear ticket and its worktree together:
 
 ```sh
 hwt create 'Change the blog title' --json
@@ -74,6 +74,10 @@ hwt remove --workspace WORKSPACE_ID --json
 
 The PostgreSQL database remains available for inspection after worktree removal. Drop it explicitly
 when its data is no longer useful.
+
+The repository pins lnr and stores only the public RMS team ID under `.hwt-config`. Authentication
+still comes from your normal lnr OAuth cache; no Linear credential is copied into a worktree or
+committed. `bin/hwt-ticket` adapts lnr's output into hwt's private per-worktree ticket metadata.
 
 ## Checks
 

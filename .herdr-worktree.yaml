@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/dkarter/hwt/v0.6.2-dev.20260912.4.1.gb654214/schema/herdr-worktree.schema.json
 agent: opencode2
-ticket_command: [lnr, quick, --json]
+ticket_command: [bin/hwt-ticket]
 review_command: [tuicr]
 worktree_dir: ../
 worktree_naming: full
@@ -43,5 +43,5 @@ files:
     - _build
 
 post_create:
-  - mise install
+  - ./bin/install-tools
   - ./bin/setup

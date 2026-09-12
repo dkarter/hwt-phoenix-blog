@@ -10,6 +10,8 @@ fnox = "latest"
 gitleaks = "latest"
 lefthook = "latest"
 pitchfork = "latest"
+"github:dkarter/lnr" = "latest"
+jq = "latest"
 
 [hooks]
 postinstall = "lefthook install"
@@ -32,9 +34,9 @@ run = "./bin/dev"
 
 [tasks.test]
 description = "Runs the test suite against the worktree's test database"
-run = "docker compose up -d --wait db && mix test"
+run = "./test/tooling_test.sh && docker compose up -d --wait db && mix test"
 
 [tasks.check]
 description = "Runs formatting, compilation, and tests"
 depends = ["fmt-check"]
-run = "docker compose up -d --wait db && mix precommit"
+run = "./test/tooling_test.sh && docker compose up -d --wait db && mix precommit"
