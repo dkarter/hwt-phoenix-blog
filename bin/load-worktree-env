@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -f .env.worktree ]; then
+  set -a
+  # HWT owns this mode-0600 file and emits shell-safe dotenv values.
+  . ./.env.worktree
+  set +a
+fi

@@ -1,0 +1,40 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+[tools]
+"github:crate-ci/committed" = "latest"
+"github:dkarter/hwt" = "0.6.2-dev.20260912.4.1.gb654214"
+dprint = "latest"
+elixir = "1.20.4-otp-29"
+erlang = "29.0.6"
+fnox = "latest"
+gitleaks = "latest"
+lefthook = "latest"
+pitchfork = "latest"
+
+[hooks]
+postinstall = "lefthook install"
+
+[tasks.fmt]
+description = "Formats all supported files"
+run = "mix format && dprint fmt"
+
+[tasks.fmt-check]
+description = "Checks formatting and fails on differences"
+run = "mix format --check-formatted && dprint check"
+
+[tasks.setup]
+description = "Starts PostgreSQL and prepares the current database"
+run = "./bin/setup"
+
+[tasks.dev]
+description = "Starts the worktree's Phoenix server"
+run = "./bin/dev"
+
+[tasks.test]
+description = "Runs the test suite against the worktree's test database"
+run = "docker compose up -d --wait db && mix test"
+
+[tasks.check]
+description = "Runs formatting, compilation, and tests"
+depends = ["fmt-check"]
+run = "docker compose up -d --wait db && mix precommit"

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -eu
+
+. ./bin/load-worktree-env
+
+database_name=${DATABASE_NAME:-hwt_phoenix_blog_dev}
+printf '{"name":"%s"}\n' "$database_name"
