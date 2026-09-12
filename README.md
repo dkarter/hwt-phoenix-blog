@@ -53,10 +53,11 @@ hwt pr --json
 hwt preview --json
 ```
 
-`local` uses hwt's generated Caddy/dnsmasq hostname. Run `hwt dns setup --json` once and connect the
-reported snippets to user-managed services if you want that hostname to resolve. `branch-preview`
-and `preview` use `.invalid` intentionally: they demonstrate deterministic branch and PR URL
-resolution without pretending a deployment provider exists.
+`local` uses hwt's generated Caddy/dnsmasq hostname. Install Caddy and dnsmasq, then run
+`hwt dns setup --json` once and connect the reported snippets to those user-managed services if you
+want that hostname to resolve. HWT does not install packages or manage privileged services.
+`branch-preview` and `preview` use `.invalid` intentionally: they demonstrate deterministic branch
+and PR URL resolution without pretending a deployment provider exists.
 
 Create a pull request before using `hwt pr`, `hwt preview`, or `{pr_number}`. Review it in an exact,
 reusable workspace with:
