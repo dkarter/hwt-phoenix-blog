@@ -57,5 +57,12 @@ defmodule HwtPhoenixBlog.BlogTest do
       post = post_fixture()
       assert %Ecto.Changeset{} = Blog.change_post(post)
     end
+
+    test "reading_time_minutes/1 rounds up from 200 words per minute" do
+      assert Post.reading_time_minutes(%Post{body: "short post"}) == 1
+
+      body = List.duplicate("word", 201) |> Enum.join(" ")
+      assert Post.reading_time_minutes(%Post{body: body}) == 2
+    end
   end
 end

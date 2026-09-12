@@ -15,5 +15,8 @@
   <.list>
     <:item title="Title">{@post.title}</:item>
     <:item title="Body">{@post.body}</:item>
+    <:item title="Reading time">
+      {HwtPhoenixBlog.Blog.Post.reading_time_minutes(@post)} min
+    </:item>
   </.list>
 </Layouts.app>
