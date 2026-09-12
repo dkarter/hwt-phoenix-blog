@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/dkarter/hwt/v0.6.2-dev.20260912.4.1.gb654214/schema/herdr-worktree.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dkarter/hwt/v0.6.2-dev.20260912.5.1.ga6e2a1d/schema/herdr-worktree.schema.json
 agent: opencode2
 ticket_command: [bin/hwt-ticket]
 review_command: [tuicr]
