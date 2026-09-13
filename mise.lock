@@ -147,6 +147,21 @@ checksum = "sha256:c13b374db73c2d7d757eb3317183d74f872354e5746976f18bbd5de46bc95
 url = "https://github.com/erlang/otp/releases/download/OTP-29.0.6/otp_win64_29.0.6.zip"
 url_api = "https://api.github.com/repos/erlang/otp/releases/assets/539580967"
 
+[[tools.erlang]]
+version = "29.0.6"
+backend = "core:erlang"
+
+[tools.erlang.options]
+precompiled_os = "ubuntu-24.04"
+
+[tools.erlang."platforms.linux-arm64"]
+checksum = "sha256:6392ce07466c4e46ed110a3c2731894e9237ea578d268d8828f6a87ee7bf118f"
+url = "https://builds.hex.pm/builds/otp/arm64/ubuntu-24.04/OTP-29.0.6.tar.gz"
+
+[tools.erlang."platforms.linux-x64"]
+checksum = "sha256:3217eec39b0c91d50de2e8d4042bd31a33a19fc5164ea3f7ffecba77634f2d1c"
+url = "https://builds.hex.pm/builds/otp/amd64/ubuntu-24.04/OTP-29.0.6.tar.gz"
+
 [[tools.fnox]]
 version = "1.35.1"
 backend = "packslip:github.com/jdx/fnox"
@@ -228,50 +243,50 @@ url = "https://github.com/crate-ci/committed/releases/download/v1.1.11/committed
 url_api = "https://api.github.com/repos/crate-ci/committed/releases/assets/361545840"
 
 [[tools."github:dkarter/hwt"]]
-version = "0.6.2-dev.20260913.8.1.g2ec9d38"
+version = "0.6.2-dev.20260913.9.1.gecc7da0"
 backend = "github:dkarter/hwt"
-specifiers = ["0.6.2-dev.20260913.8.1.g2ec9d38"]
+specifiers = ["0.6.2-dev.20260913.9.1.gecc7da0"]
 
 [tools."github:dkarter/hwt"."platforms.linux-arm64"]
-checksum = "sha256:626376c7bea382714739b716393847c93e7189702932f2728a188e29fbcca3b5"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653632"
+checksum = "sha256:8ed0912473df31e8c32d262dc7966879b5fe6681f056daef089d0f4a88ff1d66"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745811"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.linux-arm64-musl"]
-checksum = "sha256:626376c7bea382714739b716393847c93e7189702932f2728a188e29fbcca3b5"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653632"
+checksum = "sha256:8ed0912473df31e8c32d262dc7966879b5fe6681f056daef089d0f4a88ff1d66"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745811"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.linux-x64"]
-checksum = "sha256:62970e2fa2d4d903eaf65a4fea8f208e5c8a36bf71f46ad22de4d32a7ca4e142"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653646"
+checksum = "sha256:b57a0ddd6081027b3ea8f399600b25e29c05573edc2cb1b2fc9a2a70962095e3"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745820"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.linux-x64-musl"]
-checksum = "sha256:62970e2fa2d4d903eaf65a4fea8f208e5c8a36bf71f46ad22de4d32a7ca4e142"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653646"
+checksum = "sha256:b57a0ddd6081027b3ea8f399600b25e29c05573edc2cb1b2fc9a2a70962095e3"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745820"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.macos-arm64"]
-checksum = "sha256:99d5d12b56332619c49395b68e51690f1bbb9e3331c65956aa6d28e1a0ff3b81"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653630"
+checksum = "sha256:b42523b7a5f8fe1496c639dcd4a86b40d79a2a10afd09d4f9ea665fd4678cbd2"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745814"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.macos-x64"]
-checksum = "sha256:1bec0dc9cb5a0d063367688c36d2c15b18aebc645fe6b649b3f9684594ea5e4b"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_darwin_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653628"
+checksum = "sha256:fa1e422badccaaf3fa58861cd0d4f3d3fde4c154e82a8d61184d79883d43a095"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_darwin_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745813"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.windows-x64"]
-checksum = "sha256:87d6c2b30da1230ac5af9de9cbf4ac6183e26f2aa9a3d6c95e90cee3c7848f15"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt-0.6.2-dev.20260913.8.1.g2ec9d38.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653631"
+checksum = "sha256:009f895fcb9061d6022ca29c33ec2a08525cb5256f01ded4c3c9e6ff41d11c2b"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt-0.6.2-dev.20260913.9.1.gecc7da0.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745809"
 provenance = "github-attestations"
 
 [[tools."github:dkarter/lnr"]]

@@ -2,7 +2,7 @@
 
 [tools]
 "github:crate-ci/committed" = "latest"
-"github:dkarter/hwt" = "0.6.2-dev.20260913.8.1.g2ec9d38"
+"github:dkarter/hwt" = "0.6.2-dev.20260913.9.1.gecc7da0"
 caddy = "latest"
 dprint = "latest"
 elixir = "1.20.4-otp-29"
