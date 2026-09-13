@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/dkarter/hwt/v0.6.2-dev.20260913.8.1.g2ec9d38/schema/herdr-worktree.schema.json
+agent: opencode2
+ticket_commands:
+  default:
+    command: [env, XDG_CONFIG_HOME=.hwt-config, lnr, quick, '{input}', --json]
+    output:
+      branch: branchName
+      metadata: { identifier: issueId, title: title, url: url }
+  existing:
+    command: [env, XDG_CONFIG_HOME=.hwt-config, lnr, issue, search, --json, '{input}']
+    output:
+      branch: branchName
+      metadata: { identifier: issueId, title: title, url: url }
+review_command: [tuicr]
+worktree_dir: ../
+worktree_naming: full
+worktree_prefix: hwt-blog-
+
+urls:
+  local: http://web.{hostname}
+  preview: https://pr-{pr_number}.hwt-phoenix-blog.example.invalid
+  branch-preview: https://{sanitized_branch}.hwt-phoenix-blog.example.invalid
+  ticket: https://linear.app/srms/issue/{ticket.identifier}
+  database: postgresql://postgres:postgres@localhost:54329/{database.name}
+  repository: https://github.com/dkarter/{repository}
+
+metadata:
+  commands:
+    database: [bin/hwt-database-metadata]
+
+ports:
+  start: 4100
+  end: 4199
+  services: [web]
+
+local_dns:
+  enabled: true
+  domain: hwt.test
+
+environment:
+  variables:
+    PORT: ${HWT_PORT_WEB}
+    DATABASE_NAME: hwt_phoenix_blog_${HWT_PORT_WEB}
+    DATABASE_HOSTNAME: localhost
+    DATABASE_PORT: '54329'
+    DATABASE_USERNAME: postgres
+    DATABASE_PASSWORD: postgres
+
+files:
+  copy_on_write: true
+  copy:
+    - deps
+    - _build
+
+post_create:
+  - ./bin/install-tools
+  - ./bin/setup

@@ -2,6 +2,46 @@
 
 lockfile_version = 1
 
+[[tools.caddy]]
+version = "2.11.4"
+backend = "aqua:caddyserver/caddy"
+specifiers = ["latest"]
+
+[tools.caddy."platforms.linux-arm64"]
+checksum = "sha256:52d42ae12b3462097e9868da6dfed3c9648ae12edd3b3638102312af84cb6904"
+url = "https://github.com/caddyserver/caddy/releases/download/v2.11.4/caddy_2.11.4_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/caddyserver/caddy/releases/assets/436912318"
+
+[tools.caddy."platforms.linux-arm64-musl"]
+checksum = "sha256:52d42ae12b3462097e9868da6dfed3c9648ae12edd3b3638102312af84cb6904"
+url = "https://github.com/caddyserver/caddy/releases/download/v2.11.4/caddy_2.11.4_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/caddyserver/caddy/releases/assets/436912318"
+
+[tools.caddy."platforms.linux-x64"]
+checksum = "sha256:527fbf917c39189a1e3b31d34fa955601680b2d5c8055d2a87b8b9588dec7bb9"
+url = "https://github.com/caddyserver/caddy/releases/download/v2.11.4/caddy_2.11.4_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/caddyserver/caddy/releases/assets/436912315"
+
+[tools.caddy."platforms.linux-x64-musl"]
+checksum = "sha256:527fbf917c39189a1e3b31d34fa955601680b2d5c8055d2a87b8b9588dec7bb9"
+url = "https://github.com/caddyserver/caddy/releases/download/v2.11.4/caddy_2.11.4_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/caddyserver/caddy/releases/assets/436912315"
+
+[tools.caddy."platforms.macos-arm64"]
+checksum = "sha256:9efb0af2d6cf09cfb5053c0e51721b9b3d4956d346234f39368d943d25a3c9a7"
+url = "https://github.com/caddyserver/caddy/releases/download/v2.11.4/caddy_2.11.4_mac_arm64.tar.gz"
+url_api = "https://api.github.com/repos/caddyserver/caddy/releases/assets/436912311"
+
+[tools.caddy."platforms.macos-x64"]
+checksum = "sha256:34bc9e5cceee8d67844ef51da624f5b79e8d070f27236e050c3f0066a2dba534"
+url = "https://github.com/caddyserver/caddy/releases/download/v2.11.4/caddy_2.11.4_mac_amd64.tar.gz"
+url_api = "https://api.github.com/repos/caddyserver/caddy/releases/assets/436912339"
+
+[tools.caddy."platforms.windows-x64"]
+checksum = "sha256:1708333f79e274c7697285afe6d592ab39314e0b131e9ec6bea08ad27df62ebf"
+url = "https://github.com/caddyserver/caddy/releases/download/v2.11.4/caddy_2.11.4_windows_amd64.zip"
+url_api = "https://api.github.com/repos/caddyserver/caddy/releases/assets/436912304"
+
 [[tools.dprint]]
 version = "0.57.4"
 backend = "aqua:dprint/dprint"
@@ -107,21 +147,6 @@ checksum = "sha256:c13b374db73c2d7d757eb3317183d74f872354e5746976f18bbd5de46bc95
 url = "https://github.com/erlang/otp/releases/download/OTP-29.0.6/otp_win64_29.0.6.zip"
 url_api = "https://api.github.com/repos/erlang/otp/releases/assets/539580967"
 
-[[tools.erlang]]
-version = "29.0.6"
-backend = "core:erlang"
-
-[tools.erlang.options]
-precompiled_os = "ubuntu-24.04"
-
-[tools.erlang."platforms.linux-arm64"]
-checksum = "sha256:6392ce07466c4e46ed110a3c2731894e9237ea578d268d8828f6a87ee7bf118f"
-url = "https://builds.hex.pm/builds/otp/arm64/ubuntu-24.04/OTP-29.0.6.tar.gz"
-
-[tools.erlang."platforms.linux-x64"]
-checksum = "sha256:3217eec39b0c91d50de2e8d4042bd31a33a19fc5164ea3f7ffecba77634f2d1c"
-url = "https://builds.hex.pm/builds/otp/amd64/ubuntu-24.04/OTP-29.0.6.tar.gz"
-
 [[tools.fnox]]
 version = "1.35.1"
 backend = "packslip:github.com/jdx/fnox"
@@ -203,50 +228,50 @@ url = "https://github.com/crate-ci/committed/releases/download/v1.1.11/committed
 url_api = "https://api.github.com/repos/crate-ci/committed/releases/assets/361545840"
 
 [[tools."github:dkarter/hwt"]]
-version = "0.6.2-dev.20260912.5.1.ga6e2a1d"
+version = "0.6.2-dev.20260913.8.1.g2ec9d38"
 backend = "github:dkarter/hwt"
-specifiers = ["0.6.2-dev.20260912.5.1.ga6e2a1d"]
+specifiers = ["0.6.2-dev.20260913.8.1.g2ec9d38"]
 
 [tools."github:dkarter/hwt"."platforms.linux-arm64"]
-checksum = "sha256:145270228a8eecbedd32cceea5d5d8536cb7ce5b4bdfa7ed9cb263994afe562e"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260912.5.1.ga6e2a1d/hwt_0.6.2-dev.20260912.5.1.ga6e2a1d_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560089936"
+checksum = "sha256:626376c7bea382714739b716393847c93e7189702932f2728a188e29fbcca3b5"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653632"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.linux-arm64-musl"]
-checksum = "sha256:145270228a8eecbedd32cceea5d5d8536cb7ce5b4bdfa7ed9cb263994afe562e"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260912.5.1.ga6e2a1d/hwt_0.6.2-dev.20260912.5.1.ga6e2a1d_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560089936"
+checksum = "sha256:626376c7bea382714739b716393847c93e7189702932f2728a188e29fbcca3b5"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653632"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.linux-x64"]
-checksum = "sha256:9d7062604b9a01a4b55ac6af514a4105b9c81bc713a0b1f5528bca2b7abbdb33"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260912.5.1.ga6e2a1d/hwt_0.6.2-dev.20260912.5.1.ga6e2a1d_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560089946"
+checksum = "sha256:62970e2fa2d4d903eaf65a4fea8f208e5c8a36bf71f46ad22de4d32a7ca4e142"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653646"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.linux-x64-musl"]
-checksum = "sha256:9d7062604b9a01a4b55ac6af514a4105b9c81bc713a0b1f5528bca2b7abbdb33"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260912.5.1.ga6e2a1d/hwt_0.6.2-dev.20260912.5.1.ga6e2a1d_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560089946"
+checksum = "sha256:62970e2fa2d4d903eaf65a4fea8f208e5c8a36bf71f46ad22de4d32a7ca4e142"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653646"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.macos-arm64"]
-checksum = "sha256:d7638bf30cd663b72811a200313f64494f4306e4b09da7ed2091678cafcda38f"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260912.5.1.ga6e2a1d/hwt_0.6.2-dev.20260912.5.1.ga6e2a1d_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560089937"
+checksum = "sha256:99d5d12b56332619c49395b68e51690f1bbb9e3331c65956aa6d28e1a0ff3b81"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653630"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.macos-x64"]
-checksum = "sha256:067928d18707e2438cb65a59e867395726edbb476bb7c097b40d06ad117a3bf6"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260912.5.1.ga6e2a1d/hwt_0.6.2-dev.20260912.5.1.ga6e2a1d_darwin_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560089934"
+checksum = "sha256:1bec0dc9cb5a0d063367688c36d2c15b18aebc645fe6b649b3f9684594ea5e4b"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt_0.6.2-dev.20260913.8.1.g2ec9d38_darwin_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653628"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.windows-x64"]
-checksum = "sha256:d1222e29f7ef38c57dc3eca00d3dc26cfec9d92eb39977c59dd3cb85ebf64dc4"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260912.5.1.ga6e2a1d/hwt-0.6.2-dev.20260912.5.1.ga6e2a1d.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560089935"
+checksum = "sha256:87d6c2b30da1230ac5af9de9cbf4ac6183e26f2aa9a3d6c95e90cee3c7848f15"
+url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.8.1.g2ec9d38/hwt-0.6.2-dev.20260913.8.1.g2ec9d38.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560653631"
 provenance = "github-attestations"
 
 [[tools."github:dkarter/lnr"]]
@@ -335,6 +360,42 @@ url_api = "https://api.github.com/repos/gitleaks/gitleaks/releases/assets/378332
 checksum = "sha256:d29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e"
 url = "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_windows_x64.zip"
 url_api = "https://api.github.com/repos/gitleaks/gitleaks/releases/assets/378333178"
+
+[[tools."http:dnsmasq"]]
+version = "2.93"
+backend = "http:dnsmasq"
+specifiers = ["2.93"]
+
+[tools."http:dnsmasq".options]
+strip_components = "1"
+
+[tools."http:dnsmasq"."platforms.linux-arm64"]
+checksum = "sha256:0c00d4e5c97c8306e5fb932b348b34269c9c29a0e7df0e8e82958b407092bc19"
+url = "https://thekelleys.org.uk/dnsmasq/dnsmasq-2.93.tar.xz"
+
+[tools."http:dnsmasq"."platforms.linux-arm64-musl"]
+checksum = "sha256:0c00d4e5c97c8306e5fb932b348b34269c9c29a0e7df0e8e82958b407092bc19"
+url = "https://thekelleys.org.uk/dnsmasq/dnsmasq-2.93.tar.xz"
+
+[tools."http:dnsmasq"."platforms.linux-x64"]
+checksum = "sha256:0c00d4e5c97c8306e5fb932b348b34269c9c29a0e7df0e8e82958b407092bc19"
+url = "https://thekelleys.org.uk/dnsmasq/dnsmasq-2.93.tar.xz"
+
+[tools."http:dnsmasq"."platforms.linux-x64-musl"]
+checksum = "sha256:0c00d4e5c97c8306e5fb932b348b34269c9c29a0e7df0e8e82958b407092bc19"
+url = "https://thekelleys.org.uk/dnsmasq/dnsmasq-2.93.tar.xz"
+
+[tools."http:dnsmasq"."platforms.macos-arm64"]
+checksum = "sha256:0c00d4e5c97c8306e5fb932b348b34269c9c29a0e7df0e8e82958b407092bc19"
+url = "https://thekelleys.org.uk/dnsmasq/dnsmasq-2.93.tar.xz"
+
+[tools."http:dnsmasq"."platforms.macos-x64"]
+checksum = "sha256:0c00d4e5c97c8306e5fb932b348b34269c9c29a0e7df0e8e82958b407092bc19"
+url = "https://thekelleys.org.uk/dnsmasq/dnsmasq-2.93.tar.xz"
+
+[tools."http:dnsmasq"."platforms.windows-x64"]
+checksum = "sha256:0c00d4e5c97c8306e5fb932b348b34269c9c29a0e7df0e8e82958b407092bc19"
+url = "https://thekelleys.org.uk/dnsmasq/dnsmasq-2.93.tar.xz"
 
 [[tools.jq]]
 version = "1.8.2"

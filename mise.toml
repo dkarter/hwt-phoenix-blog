@@ -2,7 +2,8 @@
 
 [tools]
 "github:crate-ci/committed" = "latest"
-"github:dkarter/hwt" = "0.6.2-dev.20260912.5.1.ga6e2a1d"
+"github:dkarter/hwt" = "0.6.2-dev.20260913.8.1.g2ec9d38"
+caddy = "latest"
 dprint = "latest"
 elixir = "1.20.4-otp-29"
 erlang = "29.0.6"
@@ -12,6 +13,10 @@ lefthook = "latest"
 pitchfork = "latest"
 "github:dkarter/lnr" = "latest"
 jq = "latest"
+"http:dnsmasq" = { version = "2.93", os = [
+  "linux",
+  "macos",
+], postinstall = 'make -C "$MISE_TOOL_INSTALL_PATH" && mkdir -p "$MISE_TOOL_INSTALL_PATH/bin" && install -m 0755 "$MISE_TOOL_INSTALL_PATH/src/dnsmasq" "$MISE_TOOL_INSTALL_PATH/bin/dnsmasq"', url = "https://thekelleys.org.uk/dnsmasq/dnsmasq-{{ version }}.tar.xz", checksum = "sha256:0c00d4e5c97c8306e5fb932b348b34269c9c29a0e7df0e8e82958b407092bc19", strip_components = "1", bin_path = "bin" }
 
 [hooks]
 postinstall = "lefthook install"
@@ -40,3 +45,35 @@ run = "./test/tooling_test.sh && docker compose up -d --wait db && mix test"
 description = "Runs formatting, compilation, and tests"
 depends = ["fmt-check"]
 run = "./test/tooling_test.sh && docker compose up -d --wait db && mix precommit"
+
+[tasks."hwt:config"]
+description = "Validates both hwt configuration modes"
+run = "./test/tooling_test.sh && hwt config show"
+
+[tasks."hwt:localhost"]
+description = "Activates zero-setup localhost URLs"
+run = "ln -sfn .hwt-config/hwt/localhost.yaml .herdr-worktree.yaml && hwt config validate"
+
+[tasks."hwt:dns:enable"]
+description = "Activates the optional dnsmasq and Caddy configuration"
+run = "ln -sfn .hwt-config/hwt/dnsmasq-caddy.yaml .herdr-worktree.yaml && hwt config validate"
+
+[tasks."hwt:dns:setup"]
+description = "Generates hwt's dnsmasq and Caddy snippets"
+run = "hwt dns setup --json"
+
+[tasks."hwt:dns:status"]
+description = "Shows managed local DNS registrations and paths"
+run = "hwt dns status --json"
+
+[tasks."hwt:dns:refresh"]
+description = "Refreshes the current worktree's managed DNS route"
+run = "hwt dns refresh --json"
+
+[tasks."hwt:dns:check"]
+description = "Validates generated dnsmasq and Caddy configuration"
+run = "./bin/check-hwt-dns"
+
+[tasks."hwt:dns:teardown"]
+description = "Removes hwt-owned DNS snippets after routes are removed"
+run = "hwt dns teardown --json"

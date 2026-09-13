@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -eu
+
+for tool in caddy dnsmasq jq; do
+  if ! command -v "$tool" >/dev/null 2>&1; then
+    echo "$tool is required to validate managed local DNS" >&2
+    exit 1
+  fi
+done
+
+status=$(hwt dns status --json)
+caddyfile=$(printf '%s\n' "$status" | jq -r '.paths.caddyfile')
+dnsmasq_config=$(printf '%s\n' "$status" | jq -r '.paths.dnsmasq')
+
+dnsmasq --test --conf-file="$dnsmasq_config"
+caddy validate --config "$caddyfile" --adapter caddyfile

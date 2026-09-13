@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -eu
-
-test "$1" = quick
-test "$2" = --json
-test "$3" = 'Test ticket creation'
-
-printf '%s\n' '{"issueId":"RMS-123","branchName":"rms-123-test-ticket","title":"Test ticket creation","url":"https://linear.app/srms/issue/RMS-123"}'

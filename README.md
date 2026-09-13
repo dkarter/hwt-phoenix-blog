@@ -30,8 +30,10 @@ hwt create --branch feature/change-title --base main --json
 Or create an RMS Linear ticket and its worktree together:
 
 ```sh
-hwt create 'Change the blog title' --json
+hwt create --ticket 'Change the blog title' --json
 ```
+
+Use `hwt create --ticket=existing 'RMS-123' --json` to select an existing issue instead.
 
 HWT copies `deps` and `_build` with copy-on-write, allocates `HWT_PORT_WEB`, writes
 `.env.worktree`, starts the shared PostgreSQL container, and prepares the worktree-specific database.
@@ -45,7 +47,7 @@ Inspect the generated environment and URLs:
 
 ```sh
 hwt env --json
-hwt url local --json
+hwt env -- printenv HWT_URL_WEB
 hwt url branch-preview --json
 hwt url database --json
 hwt url ticket --json
@@ -53,11 +55,28 @@ hwt pr --json
 hwt preview --json
 ```
 
-`local` uses hwt's generated Caddy/dnsmasq hostname. Install Caddy and dnsmasq, then run
-`hwt dns setup --json` once and connect the reported snippets to those user-managed services if you
-want that hostname to resolve. HWT does not install packages or manage privileged services.
+The default `HWT_URL_WEB` uses `http://web.<worktree>.localhost:<port>`. RFC 6761 localhost
+subdomains resolve to loopback without sudo, a daemon, or operating-system setup.
 `branch-preview` and `preview` use `.invalid` intentionally: they demonstrate deterministic branch
 and PR URL resolution without pretending a deployment provider exists.
+
+### Optional dnsmasq and Caddy mode
+
+The repository also includes an opt-in configuration for portless `*.hwt.test` URLs. Mise installs
+Caddy and builds dnsmasq from its checksummed official source archive. Activate and validate the
+alternative with:
+
+```sh
+mise run hwt:dns:enable
+mise run hwt:dns:setup
+mise run hwt:dns:check
+mise run hwt:dns:status
+```
+
+Connect the generated snippets to user-managed dnsmasq and Caddy services for actual hostname
+resolution. HWT does not install services, edit system configuration, invoke sudo, or start
+listeners. Restore the zero-setup mode with `mise run hwt:localhost`; after removing all managed
+worktrees, clean generated state with `mise run hwt:dns:teardown`.
 
 Create a pull request before using `hwt pr`, `hwt preview`, or `{pr_number}`. Review it in an exact,
 reusable workspace with:
@@ -78,7 +97,7 @@ when its data is no longer useful.
 
 The repository pins lnr and stores only the public RMS team ID under `.hwt-config`. Authentication
 still comes from your normal lnr OAuth cache; no Linear credential is copied into a worktree or
-committed. `bin/hwt-ticket` adapts lnr's output into hwt's private per-worktree ticket metadata.
+committed. HWT maps lnr's JSON fields directly into private per-worktree ticket metadata.
 
 ## Checks
 
