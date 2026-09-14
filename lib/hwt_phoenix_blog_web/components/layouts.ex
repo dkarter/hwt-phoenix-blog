@@ -38,7 +38,9 @@ defmodule HwtPhoenixBlogWeb.Layouts do
     <header class="navbar flex-wrap gap-2 px-4 sm:flex-nowrap sm:px-6 lg:px-8">
       <div class="min-w-fit flex-1">
         <a href={~p"/"} class="flex-1 flex w-fit items-center gap-2">
-          <span class="text-lg font-semibold">Worktree Journal</span>
+          <span class="text-lg font-semibold text-amber-600 dark:text-amber-300">
+            Worktree Journal
+          </span>
         </a>
       </div>
       <div class="flex-none">
