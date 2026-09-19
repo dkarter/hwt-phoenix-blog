@@ -1,0 +1,25 @@
+#:schema https://pitchfork.jdx.dev/schema.json
+[daemons.db]
+run = "COMPOSE_PROJECT_NAME={{ namespace }} DATABASE_PORT=$PORT docker compose up db"
+port = { expect = [5433], bump = true }
+auto = ["start", "stop"]
+ready_cmd = "COMPOSE_PROJECT_NAME={{ namespace }} docker compose exec -T db pg_isready -U postgres -d postgres"
+stop_signal = { signal = "SIGTERM", timeout = "20s" }
+hooks.on_exit = "COMPOSE_PROJECT_NAME={{ namespace }} docker compose down --remove-orphans"
+
+[daemons.web]
+run = "mix ecto.create --quiet && mix ecto.migrate --quiet && exec mix phx.server"
+auto = ["start", "stop"]
+port = { expect = [3000], bump = true }
+ready_cmd = "curl -sSf http://localhost:$PORT"
+depends = ["db"]
+proxy = "web"
+env = { DATABASE_NAME = "hwt_phoenix_blog_dev", DATABASE_PORT = "{{ daemons.db.port }}" }
+
+[settings.proxy]
+auto_start = true
+auto_trust = true
+enable = true
+https = true
+port = 443
+sync_hosts = false

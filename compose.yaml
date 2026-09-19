@@ -1,4 +1,4 @@
-name: hwt-phoenix-blog
+name: ${COMPOSE_PROJECT_NAME:-hwt-phoenix-blog}
 
 services:
   db:
@@ -8,14 +8,14 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
     ports:
-      - '127.0.0.1:54329:5432'
+      - '127.0.0.1:${DATABASE_PORT:-54329}:5432'
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U postgres -d postgres']
       interval: 2s
       timeout: 2s
       retries: 15
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql
 
 volumes:
   postgres-data:

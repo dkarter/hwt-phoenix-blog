@@ -24,6 +24,13 @@ config :hwt_phoenix_blog, HwtPhoenixBlogWeb.Endpoint,
   http: [port: String.to_integer(System.get_env("PORT", "4000"))]
 
 if config_env() == :dev do
+  if pitchfork_url = System.get_env("PITCHFORK_URL") do
+    uri = URI.parse(pitchfork_url)
+
+    config :hwt_phoenix_blog, HwtPhoenixBlogWeb.Endpoint,
+      url: [scheme: uri.scheme, host: uri.host, port: uri.port]
+  end
+
   # Reload browser tabs when matching files change.
   config :hwt_phoenix_blog, HwtPhoenixBlogWeb.Endpoint,
     live_reload: [

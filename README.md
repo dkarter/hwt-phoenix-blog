@@ -15,6 +15,30 @@ mise run dev
 The primary checkout defaults to <http://localhost:4000> and database
 `hwt_phoenix_blog_dev`.
 
+### Pitchfork
+
+Pitchfork gives each checkout its own Phoenix and PostgreSQL ports, Compose project, and database
+volume:
+
+```sh
+pitchfork start web
+pitchfork status web
+```
+
+The HTTPS proxy URL is stable even when Pitchfork bumps the underlying app port. The primary
+checkout uses `https://web.hwt-phoenix-blog.localhost`; linked worktrees automatically use
+`https://web.<worktree>.hwt-phoenix-blog.localhost`. Phoenix reads `PITCHFORK_URL` so generated URLs
+use the external HTTPS origin while Pitchfork terminates TLS and forwards HTTP to the app.
+
+Port 443 requires the Pitchfork supervisor to run with elevated privileges on macOS. Keep daemons
+and Pitchfork state owned by the current user when starting it:
+
+```sh
+mise exec -- pitchfork supervisor stop
+sudo env PITCHFORK_USER="$USER" "$(mise which pitchfork)" supervisor start
+mise exec -- pitchfork start web
+```
+
 ## Worktree workflow
 
 The repository pins the immutable hwt development release that contains ticket-backed creation,
