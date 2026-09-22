@@ -15,11 +15,3 @@ ready_cmd = "curl -sSf http://localhost:$PORT"
 depends = ["db"]
 proxy = "web"
 env = { DATABASE_NAME = "hwt_phoenix_blog_dev", DATABASE_PORT = "{{ daemons.db.port }}" }
-
-[settings.proxy]
-auto_start = true
-auto_trust = true
-enable = true
-https = true
-port = 443
-sync_hosts = false

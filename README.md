@@ -30,14 +30,23 @@ checkout uses `https://web.hwt-phoenix-blog.localhost`; linked worktrees automat
 `https://web.<worktree>.hwt-phoenix-blog.localhost`. Phoenix reads `PITCHFORK_URL` so generated URLs
 use the external HTTPS origin while Pitchfork terminates TLS and forwards HTTP to the app.
 
-Port 443 requires the Pitchfork supervisor to run with elevated privileges on macOS. Keep daemons
-and Pitchfork state owned by the current user when starting it:
+Port 443 requires the Pitchfork supervisor to run with elevated privileges on macOS. Configure
+`supervisor.user` and the proxy in the global Pitchfork config, then replace any user-level boot
+registration with a system-level one:
 
 ```sh
-mise exec -- pitchfork supervisor stop
-sudo env PITCHFORK_USER="$USER" "$(mise which pitchfork)" supervisor start
-mise exec -- pitchfork start web
+pitchfork settings set supervisor.user "$USER" --global
+pitchfork settings set proxy.enable true --global
+pitchfork settings set proxy.https true --global
+pitchfork settings set proxy.port 443 --global
+pitchfork settings set proxy.sync_hosts false --global
+pitchfork boot disable
+sudo "$(mise which pitchfork)" boot enable
 ```
+
+After removing worktrees, `pitchfork clean --prune` removes their stopped daemon registrations from
+Pitchfork's history. Process shutdown itself is handled by `auto = ["start", "stop"]` and the
+Pitchfork shell hook.
 
 ## Worktree workflow
 

@@ -2,7 +2,7 @@
 
 [tools]
 "github:crate-ci/committed" = "latest"
-"github:dkarter/hwt" = "0.6.2-dev.20260913.9.1.gecc7da0"
+"github:dkarter/hwt" = "latest"
 caddy = "latest"
 dprint = "latest"
 elixir = "1.20.4-otp-29"
@@ -10,7 +10,7 @@ erlang = "29.0.6"
 fnox = "latest"
 gitleaks = "latest"
 lefthook = "latest"
-pitchfork = "latest"
+pitchfork = "2.27.0"
 "github:dkarter/lnr" = "latest"
 jq = "latest"
 "http:dnsmasq" = { version = "2.93", os = [

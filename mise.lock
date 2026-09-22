@@ -163,43 +163,43 @@ checksum = "sha256:3217eec39b0c91d50de2e8d4042bd31a33a19fc5164ea3f7ffecba77634f2
 url = "https://builds.hex.pm/builds/otp/amd64/ubuntu-24.04/OTP-29.0.6.tar.gz"
 
 [[tools.fnox]]
-version = "1.35.1"
+version = "1.35.2"
 backend = "packslip:github.com/jdx/fnox"
 specifiers = ["latest"]
 
 [tools.fnox."platforms.linux-arm64"]
-checksum = "sha256:d81a90ac6860947e24d6cfccb83102fab2899836c4144e1f8992f2c51749daab"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-aarch64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:d404b219b6a3c3c4f3531d88cb7d3b96d00891b826d8fcfc2941b8a060028015"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-aarch64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
 
 [tools.fnox."platforms.linux-arm64-musl"]
-checksum = "sha256:ea87196c4169fdf6170a7246c3ee3643cf6e9fd57d38c39a0626ef05c2531d91"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:e01d961fd668bb678a0fde108057651c40497d6a086f9b32fa4cbb8afe215b1f"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-aarch64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
 
 [tools.fnox."platforms.linux-x64"]
-checksum = "sha256:ecdbccd01cac2d5e32601636cc0a7b1d8b1501151b4683d660b1c024763ced45"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:5f95929bb8b73cd849b238fbefe3dbf8706f57f876cc5ae23aa9aa9da62a40a9"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
 
 [tools.fnox."platforms.linux-x64-musl"]
-checksum = "sha256:491aaab498435e9edfdd8561ddc571a684cec49cee653f294544bcdf04857cca"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:9ddbd3e8304f4bd1aae59f0152efd8ec810ada9656e64ce7533d4c46f8aae985"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
 
 [tools.fnox."platforms.macos-arm64"]
-checksum = "sha256:9b733a2b9e3e893e73131cc3c7d64c8596de4c7210b47f3695ed4011d798a1e6"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:3f6e9b4f7a59a5712abe48cf6c97b2a0600392b5cb54059a80b53497adeab354"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-aarch64-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
 
 [tools.fnox."platforms.macos-x64"]
-checksum = "sha256:77e920b21e42af9df0d6bf1bba58ad95cbf28557009f172c73db2fea651c9962"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:efb1a830b0b44704b93d1647cab9b9046da7519a869cc6de3437a028c7db7417"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
 
 [tools.fnox."platforms.windows-x64"]
-checksum = "sha256:4a8ac72394d0b678fc603add1559f7d4572212b0b08fc4884426b69af036d632"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:ba662d6a6452f8ab060505ae35e3bd81c890fa1ba5ada778b4c451aaf006d6a8"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-pc-windows-msvc.zip"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
 
 [[tools."github:crate-ci/committed"]]
@@ -243,97 +243,97 @@ url = "https://github.com/crate-ci/committed/releases/download/v1.1.11/committed
 url_api = "https://api.github.com/repos/crate-ci/committed/releases/assets/361545840"
 
 [[tools."github:dkarter/hwt"]]
-version = "0.6.2-dev.20260913.9.1.gecc7da0"
+version = "0.10.0"
 backend = "github:dkarter/hwt"
-specifiers = ["0.6.2-dev.20260913.9.1.gecc7da0"]
+specifiers = ["latest"]
 
 [tools."github:dkarter/hwt"."platforms.linux-arm64"]
-checksum = "sha256:8ed0912473df31e8c32d262dc7966879b5fe6681f056daef089d0f4a88ff1d66"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745811"
+checksum = "sha256:7356d6ba2bde5fbe176eb60c02f374cb7c0c2a1d5e28dd465351cdedc14025b6"
+url = "https://github.com/dkarter/hwt/releases/download/v0.10.0/hwt_0.10.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/575182649"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.linux-arm64-musl"]
-checksum = "sha256:8ed0912473df31e8c32d262dc7966879b5fe6681f056daef089d0f4a88ff1d66"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745811"
+checksum = "sha256:7356d6ba2bde5fbe176eb60c02f374cb7c0c2a1d5e28dd465351cdedc14025b6"
+url = "https://github.com/dkarter/hwt/releases/download/v0.10.0/hwt_0.10.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/575182649"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.linux-x64"]
-checksum = "sha256:b57a0ddd6081027b3ea8f399600b25e29c05573edc2cb1b2fc9a2a70962095e3"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745820"
+checksum = "sha256:c1d0ba2850cf60271a9cfab7075201d22de98a2fb5fb5558db51204c49942ec3"
+url = "https://github.com/dkarter/hwt/releases/download/v0.10.0/hwt_0.10.0_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/575182658"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.linux-x64-musl"]
-checksum = "sha256:b57a0ddd6081027b3ea8f399600b25e29c05573edc2cb1b2fc9a2a70962095e3"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745820"
+checksum = "sha256:c1d0ba2850cf60271a9cfab7075201d22de98a2fb5fb5558db51204c49942ec3"
+url = "https://github.com/dkarter/hwt/releases/download/v0.10.0/hwt_0.10.0_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/575182658"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.macos-arm64"]
-checksum = "sha256:b42523b7a5f8fe1496c639dcd4a86b40d79a2a10afd09d4f9ea665fd4678cbd2"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745814"
+checksum = "sha256:f0c9f748943743674916a84624428bfad169396444f93ec2ea21efc39bfe6daf"
+url = "https://github.com/dkarter/hwt/releases/download/v0.10.0/hwt_0.10.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/575182652"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.macos-x64"]
-checksum = "sha256:fa1e422badccaaf3fa58861cd0d4f3d3fde4c154e82a8d61184d79883d43a095"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt_0.6.2-dev.20260913.9.1.gecc7da0_darwin_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745813"
+checksum = "sha256:3ae13429cd30a9e6a473499aee6df8a68cbef526aeebff051f24904adb772cd8"
+url = "https://github.com/dkarter/hwt/releases/download/v0.10.0/hwt_0.10.0_darwin_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/575182654"
 provenance = "github-attestations"
 
 [tools."github:dkarter/hwt"."platforms.windows-x64"]
-checksum = "sha256:009f895fcb9061d6022ca29c33ec2a08525cb5256f01ded4c3c9e6ff41d11c2b"
-url = "https://github.com/dkarter/hwt/releases/download/v0.6.2-dev.20260913.9.1.gecc7da0/hwt-0.6.2-dev.20260913.9.1.gecc7da0.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/560745809"
+checksum = "sha256:9dcb9ff853afb680dfa0a22cb45b9a8f83b9e88fa6eff3e34ad13c830bfbc692"
+url = "https://github.com/dkarter/hwt/releases/download/v0.10.0/hwt-0.10.0.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/hwt/releases/assets/575182675"
 provenance = "github-attestations"
 
 [[tools."github:dkarter/lnr"]]
-version = "3.0.1"
+version = "3.1.0"
 backend = "github:dkarter/lnr"
 specifiers = ["latest"]
 
 [tools."github:dkarter/lnr"."platforms.linux-arm64"]
-checksum = "sha256:7c5efeb1c6bd78db20d853398167b820b422e46c91fee816630ad05b16b3211e"
-url = "https://github.com/dkarter/lnr/releases/download/v3.0.1/lnr_3.0.1_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/490777745"
+checksum = "sha256:a24ea8e7330eb102ae0daa9cb93fbde10d9250cff71b9b30265ef33325e2831c"
+url = "https://github.com/dkarter/lnr/releases/download/v3.1.0/lnr_3.1.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/566326578"
 provenance = "github-attestations"
 
 [tools."github:dkarter/lnr"."platforms.linux-arm64-musl"]
-checksum = "sha256:7c5efeb1c6bd78db20d853398167b820b422e46c91fee816630ad05b16b3211e"
-url = "https://github.com/dkarter/lnr/releases/download/v3.0.1/lnr_3.0.1_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/490777745"
+checksum = "sha256:a24ea8e7330eb102ae0daa9cb93fbde10d9250cff71b9b30265ef33325e2831c"
+url = "https://github.com/dkarter/lnr/releases/download/v3.1.0/lnr_3.1.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/566326578"
 provenance = "github-attestations"
 
 [tools."github:dkarter/lnr"."platforms.linux-x64"]
-checksum = "sha256:a938107e893c46c0c0ae8e281695f220337dbdc0a733ccf19f1793c5adb82b06"
-url = "https://github.com/dkarter/lnr/releases/download/v3.0.1/lnr_3.0.1_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/490777758"
+checksum = "sha256:a030e89bf48abb3f93cf9d2849653ef78e23950f10711789010c72c93441c464"
+url = "https://github.com/dkarter/lnr/releases/download/v3.1.0/lnr_3.1.0_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/566326554"
 provenance = "github-attestations"
 
 [tools."github:dkarter/lnr"."platforms.linux-x64-musl"]
-checksum = "sha256:a938107e893c46c0c0ae8e281695f220337dbdc0a733ccf19f1793c5adb82b06"
-url = "https://github.com/dkarter/lnr/releases/download/v3.0.1/lnr_3.0.1_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/490777758"
+checksum = "sha256:a030e89bf48abb3f93cf9d2849653ef78e23950f10711789010c72c93441c464"
+url = "https://github.com/dkarter/lnr/releases/download/v3.1.0/lnr_3.1.0_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/566326554"
 provenance = "github-attestations"
 
 [tools."github:dkarter/lnr"."platforms.macos-arm64"]
-checksum = "sha256:e782338da8d0b482eefed92d5cca65ffd90aaa7edf5ec72aa260b1c73789ab99"
-url = "https://github.com/dkarter/lnr/releases/download/v3.0.1/lnr_3.0.1_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/490777744"
+checksum = "sha256:915771944fb2c625d3a94e80bc3b585d6266d14a0912abba65daecd5d7c1ea5d"
+url = "https://github.com/dkarter/lnr/releases/download/v3.1.0/lnr_3.1.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/566326555"
 provenance = "github-attestations"
 
 [tools."github:dkarter/lnr"."platforms.macos-x64"]
-checksum = "sha256:9c6884c6e91ec61ba12f9b1f5f0b8108442c66326e41023287e71cf09dfe27b8"
-url = "https://github.com/dkarter/lnr/releases/download/v3.0.1/lnr_3.0.1_darwin_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/490777746"
+checksum = "sha256:b367ed9ffa3112dc213048e3e17b70fb67df9b74718cb4c8b26396880c1ff105"
+url = "https://github.com/dkarter/lnr/releases/download/v3.1.0/lnr_3.1.0_darwin_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/566326579"
 provenance = "github-attestations"
 
 [tools."github:dkarter/lnr"."platforms.windows-x64"]
-checksum = "sha256:c2b0ec9649424e9d368df15ae2740bddff440ef56a25317eab4190c08322f278"
-url = "https://github.com/dkarter/lnr/releases/download/v3.0.1/lnr_3.0.1_windows_x86_64.zip"
-url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/490777747"
+checksum = "sha256:34c0828a4589ed12faf06e912b425881f632482c0571dc224de25bceea1a26bb"
+url = "https://github.com/dkarter/lnr/releases/download/v3.1.0/lnr_3.1.0_windows_x86_64.zip"
+url_api = "https://api.github.com/repos/dkarter/lnr/releases/assets/566326587"
 provenance = "github-attestations"
 
 [[tools.gitleaks]]
@@ -460,73 +460,73 @@ url_api = "https://api.github.com/repos/jqlang/jq/releases/assets/453012788"
 provenance = "github-attestations"
 
 [[tools.lefthook]]
-version = "2.1.12"
+version = "2.1.14"
 backend = "aqua:evilmartians/lefthook"
 specifiers = ["latest"]
 
 [tools.lefthook."platforms.linux-arm64"]
-checksum = "sha256:d96ac16753f6d3d69b92098621c2a2427522a9c2c3e78cd7c9b4a9790b0b8f17"
-url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.12/lefthook_2.1.12_Linux_aarch64.gz"
-url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/533627819"
+checksum = "sha256:2fd4b1f33aab4e4c8691a1a6a750b0638a40bdef871234cacb33781615dbf7ba"
+url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.14/lefthook_2.1.14_Linux_aarch64.gz"
+url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/563149908"
 provenance = "github-attestations"
 
 [tools.lefthook."platforms.linux-arm64-musl"]
-checksum = "sha256:d96ac16753f6d3d69b92098621c2a2427522a9c2c3e78cd7c9b4a9790b0b8f17"
-url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.12/lefthook_2.1.12_Linux_aarch64.gz"
-url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/533627819"
+checksum = "sha256:2fd4b1f33aab4e4c8691a1a6a750b0638a40bdef871234cacb33781615dbf7ba"
+url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.14/lefthook_2.1.14_Linux_aarch64.gz"
+url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/563149908"
 provenance = "github-attestations"
 
 [tools.lefthook."platforms.linux-x64"]
-checksum = "sha256:dad908593c859d139b886c14913a44401d95288aa7642d9bdf6f3bd36bd788ff"
-url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.12/lefthook_2.1.12_Linux_x86_64.gz"
-url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/533627780"
+checksum = "sha256:2be3187101b3a2edd5edf8b546aa2e3820531c517b4cd0216601a9c06f07c42d"
+url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.14/lefthook_2.1.14_Linux_x86_64.gz"
+url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/563149839"
 provenance = "github-attestations"
 
 [tools.lefthook."platforms.linux-x64-musl"]
-checksum = "sha256:dad908593c859d139b886c14913a44401d95288aa7642d9bdf6f3bd36bd788ff"
-url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.12/lefthook_2.1.12_Linux_x86_64.gz"
-url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/533627780"
+checksum = "sha256:2be3187101b3a2edd5edf8b546aa2e3820531c517b4cd0216601a9c06f07c42d"
+url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.14/lefthook_2.1.14_Linux_x86_64.gz"
+url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/563149839"
 provenance = "github-attestations"
 
 [tools.lefthook."platforms.macos-arm64"]
-checksum = "sha256:f23eac328ca50c7b775dc24dc275cdeacb65e16cf8bd1745d18e3c563f704f94"
-url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.12/lefthook_2.1.12_MacOS_arm64.gz"
-url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/533627758"
+checksum = "sha256:398e6a23dfe2de3fc113e091dd4b592795cc8f1665acf5501856858b8056d686"
+url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.14/lefthook_2.1.14_MacOS_arm64.gz"
+url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/563149840"
 provenance = "github-attestations"
 
 [tools.lefthook."platforms.macos-x64"]
-checksum = "sha256:83c8591d338b1b789944480d9effe2807adc903cf27e4a16ab013e39d7723c31"
-url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.12/lefthook_2.1.12_MacOS_x86_64.gz"
-url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/533627775"
+checksum = "sha256:9e304cad12b3785bf45ba6085fa6a91ed45f6ff6e7dabd50cb6834959caef06a"
+url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.14/lefthook_2.1.14_MacOS_x86_64.gz"
+url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/563149898"
 provenance = "github-attestations"
 
 [tools.lefthook."platforms.windows-x64"]
-checksum = "sha256:c642d9ad8818faff1379e1b72321b4baddd0d6f20ffd7303f59386bb6abfd6e9"
-url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.12/lefthook_2.1.12_Windows_x86_64.gz"
-url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/533627801"
+checksum = "sha256:61a0f47c75c741fa2788aff55f85dfa0a34307257b176cb6b20fd821ae030454"
+url = "https://github.com/evilmartians/lefthook/releases/download/v2.1.14/lefthook_2.1.14_Windows_x86_64.gz"
+url_api = "https://api.github.com/repos/evilmartians/lefthook/releases/assets/563149872"
 provenance = "github-attestations"
 
 [[tools.pitchfork]]
-version = "2.26.0"
+version = "2.27.0"
 backend = "packslip:github.com/jdx/pitchfork"
-specifiers = ["2.26.0"]
+specifiers = ["2.27.0"]
 
 [tools.pitchfork."platforms.linux-arm64"]
-checksum = "sha256:c8db374b01f30c86758df559ceeee65584f6118786acdc35aaa05ef638f90caa"
-url = "https://github.com/jdx/pitchfork/releases/download/v2.26.0/pitchfork-aarch64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:14f7a5e758407e8306234cabb2dd3768670453d9078bcdec6cc4089dfd72d8ed"
+url = "https://github.com/jdx/pitchfork/releases/download/v2.27.0/pitchfork-aarch64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/pitchfork/.github/workflows/release.yml"
 
 [tools.pitchfork."platforms.linux-x64"]
-checksum = "sha256:c9b56360f991a430610c6bb71adc9493c95d1b822cdf0b5dba42562f88c40f1a"
-url = "https://github.com/jdx/pitchfork/releases/download/v2.26.0/pitchfork-x86_64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:20d7f851e3baec00fd97d53b2f95a986287b959957f56195c6f7f8d504bbea6e"
+url = "https://github.com/jdx/pitchfork/releases/download/v2.27.0/pitchfork-x86_64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/pitchfork/.github/workflows/release.yml"
 
 [tools.pitchfork."platforms.macos-arm64"]
-checksum = "sha256:5657a6d636aa903f6f47c7612b4252cb86c7cdde7daff754910d43a68f55584a"
-url = "https://github.com/jdx/pitchfork/releases/download/v2.26.0/pitchfork-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:77491f4d803039ae4cf346c292db62b9b5aad971cc0850413917ef92cf335901"
+url = "https://github.com/jdx/pitchfork/releases/download/v2.27.0/pitchfork-aarch64-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/pitchfork/.github/workflows/release.yml"
 
 [tools.pitchfork."platforms.windows-x64"]
-checksum = "sha256:8250b1a6c06c0ea1e0a7e9f8c3a5a1818e4237f7130cf3ac1b1b206c65e6ca60"
-url = "https://github.com/jdx/pitchfork/releases/download/v2.26.0/pitchfork-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:ae9e0d7d52c9c85689b7a2c5f0d96c8ef89ed0dfb6da310832375e8e5cfd67ce"
+url = "https://github.com/jdx/pitchfork/releases/download/v2.27.0/pitchfork-x86_64-pc-windows-msvc.zip"
 signer = "sigstore-oidc:https://github.com/jdx/pitchfork/.github/workflows/release.yml"

@@ -54,3 +54,9 @@ files:
 post_create:
   - ./bin/install-tools
   - ./bin/setup
+
+pre_remove:
+  - mise exec -- pitchfork stop --local
+
+post_remove:
+  - mise exec -- pitchfork clean --prune
